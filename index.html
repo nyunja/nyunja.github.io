@@ -16,8 +16,15 @@
                 Nyunja
             </div>
             <div class="nav-container">
-                <nav>
-                    <div class="menu-icon"><i class='bx bx-menu-alt-right'></i></div>
+                <div class="menu-icon"><i class='bx bx-menu-alt-right'></i></div>
+                <nav class="main">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="mobile">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
@@ -28,5 +35,13 @@
         </div>
     </div>
 </body>
+<script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const mobileNav = document.querySelector('.mobile');
+
+    menuIcon.addEventListener('click', () => {
+        mobileNav.classList.toggle('show');
+    });
+</script>
 
 </html>
