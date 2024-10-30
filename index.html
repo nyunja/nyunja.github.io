@@ -42,6 +42,17 @@
     menuIcon.addEventListener('click', () => {
         mobileNav.classList.toggle('show');
     });
+    function hideMobileMenu() {
+        if (window.innerWidth > 700) {
+            mobileNav.classList.remove('show');
+        }
+    }
+
+    // Hide mobile menu on resize
+    window.addEventListener('resize', hideMobileMenu);
+
+    // Initial check incase the page loads on a large screen
+    hideMobileMenu();
 </script>
 
 </html>
