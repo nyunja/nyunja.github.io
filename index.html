@@ -33,6 +33,20 @@
                 </nav>
             </div>
         </div>
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Hi, I am Nyunja</h1>
+                <p>A fullstack software engineer.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="hero-image">
+                <img src="profile-picture.jpeg" alt="Hero Image" />
+            </div>
+        </div>
+        <div class="github-section">
+            <h2>My GitHub Repositories</h2>
+            <div id="repos"></div>
+        </div>
     </div>
 </body>
 <script>
@@ -47,6 +61,37 @@
             mobileNav.classList.remove('show');
         }
     }
+
+    // Github username
+    const username = "nyunja"
+
+    // Fetch GitHub profile information
+    fetch(`https://api.github.com/users/${username}/repos`)
+       .then(response => response.json())
+       .then(data => {
+        // Sort repositories by updated_at in descending order
+        const sortedRepos = data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+
+        // Display repositories
+        const reposContainer = document.querySelector('#repos');
+        sortedRepos.forEach(repo => {
+            const repoItem = document.createElement('div');
+            repoItem.classList.add('repo');
+            repoItem.innerHTML = `
+                <h3>${repo.name}</h3>
+                <p>${repo.description}</p>
+                <a href="${repo.html_url}" target="_blank">View Repository</a>
+            `;
+            reposContainer.appendChild(repoItem);
+        });
+       })
+
+    // Close mobile menu when clicking outside
+    window.addEventListener('click', (event) => {
+        if (!event.target.closest('.nav-container') &&!event.target.closest('.menu-icon')) {
+            mobileNav.classList.remove('show');
+        }
+    });
 
     // Hide mobile menu on resize
     window.addEventListener('resize', hideMobileMenu);
