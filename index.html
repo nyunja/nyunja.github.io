@@ -35,8 +35,8 @@
         </div>
         <div class="hero">
             <div class="hero-text">
-                <h1>Hi, I am Nyunja</h1>
-                <p>A fullstack software engineer.</p>
+                <h1>Hey there! I’m Nyunja 👋</h1>
+                <p>A fullstack software engineer with a love for building clean, effective, and (hopefully) delightful experiences on the web.</p>
                 <a href="#" class="btn">Learn More</a>
             </div>
             <div class="hero-image">
@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="github-section">
-            <h2>My GitHub Repositories</h2>
+            <h2>My Projects</h2>
             <div id="repos"></div>
         </div>
         <div class="footer">
@@ -76,6 +76,11 @@
         }
     }
 
+    function formatTitle(s) {
+        let arr = s.split("-")
+        return arr.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+    }
+
     // Github username
     const username = "nyunja"
 
@@ -89,6 +94,7 @@
         // Display repositories
         const reposContainer = document.querySelector('#repos');
         sortedRepos.forEach(repo => {
+            repo.name = formatTitle(repo.name)
             const repoItem = document.createElement('div');
             repoItem.classList.add('repo');
             repoItem.innerHTML = `
