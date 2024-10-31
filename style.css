@@ -134,6 +134,8 @@ nav.mobile.show {
 
 /* Repo section */
 .github-section {
+    margin: 0 auto;
+    max-width: 1080px;
     padding: 2rem;
 }
 
