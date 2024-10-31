@@ -140,6 +140,24 @@ nav.mobile.show {
     text-decoration: underline;
 }
 
+/* Footer */
+.footer {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+}
+
+.footer .contact {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .copy {
+    margin-top: 10px;
+    text-align: center;
+}
+
 @media only screen and (max-width: 700px) {
     .menu-icon {
         display: block;
