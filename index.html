@@ -38,7 +38,7 @@
                 <h1>Hey there! I’m Nyunja 👋</h1>
                 <p>A fullstack software engineer with a love for building clean, effective, and (hopefully) delightful experiences on the web.</p>
                 <p>Always open to collaborating on interesting projects, so connect with me on LinkedIn or send me an Email.</p>
-                <a href="#" class="btn">Learn More</a>
+                <!-- <a href="#" class="btn">Learn More</a> -->
             </div>
             <div class="hero-image">
                 <img src="profile-picture.jpeg" alt="Hero Image" />
@@ -52,10 +52,10 @@
             <div class="contact">
                 <p>nyunja.jp@gmail.com</p>
                 <div class="social-media">
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://linkedin.com/nyunja"><i class='bx bxl-linkedin'></i></a>
+                    <!-- <a href="#"><i class='bx bxl-facebook'></i></a> -->
+                    <a href="https://x.com/nyunja"><i class='bx bxl-twitter'></i></a>
+                    <!-- <a href="#"><i class='bx bxl-instagram'></i></a> -->
                 </div>
             </div>
             <div class="copy">
@@ -108,17 +108,17 @@
        })
 
     // Close mobile menu when clicking outside
-    window.addEventListener('click', (event) => {
-        if (!event.target.closest('.nav-container') &&!event.target.closest('.menu-icon')) {
-            mobileNav.classList.remove('show');
-        }
-    });
+    // window.addEventListener('click', (event) => {
+    //     if (!event.target.closest('.nav-container') &&!event.target.closest('.menu-icon')) {
+    //         mobileNav.classList.remove('show');
+    //     }
+    // });
 
-    // Hide mobile menu on resize
-    window.addEventListener('resize', hideMobileMenu);
+    // // Hide mobile menu on resize
+    // window.addEventListener('resize', hideMobileMenu);
 
-    // Initial check incase the page loads on a large screen
-    hideMobileMenu();
+    // // Initial check incase the page loads on a large screen
+    // hideMobileMenu();
 </script>
 
 </html>
