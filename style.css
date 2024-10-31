@@ -80,7 +80,7 @@ nav ul li:hover:after {
     display: none;
     background: #fff;
     border-radius: 30px;
-    padding: 20px;
+    padding: 10px 20px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -97,6 +97,49 @@ nav.mobile.show {
     display: block;
 }
 
+
+/* Hero section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Repo section */
+.github-section {
+    padding: 2rem;
+}
+
+.github-section h2 {
+    margin-bottom: 1rem;
+}
+
+.repo {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.repo h3 {
+    margin-bottom: 0.5rem;
+}
+
+.repo a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.repo a:hover {
+    text-decoration: underline;
+}
+
 @media only screen and (max-width: 700px) {
     .menu-icon {
         display: block;
@@ -106,6 +149,9 @@ nav.mobile.show {
     .nav-container {
         flex-direction: column;
         align-items: flex-end;
+    }
+    .hero {
+        flex-direction: column-reverse;
     }
 
     nav.main {
