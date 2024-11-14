@@ -286,7 +286,7 @@ nav.mobile.show {
     }
 
 .hero-image {
-    margin-left: 11rem;
+    margin-left: 20rem;
 }
     .repo {
         justify-content: center;
@@ -309,7 +309,9 @@ nav.mobile.show {
         flex-direction: column;
         align-items: flex-end;
     }
-
+    .hero-image {
+        margin-left: 11rem;
+    }
 
     .about {
         width: 100%;
