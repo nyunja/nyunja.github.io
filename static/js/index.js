@@ -10,6 +10,16 @@
     //     }
     // }
 
+    document.addEventListener('DOMContentLoaded', function() {
+        const scrollDown = document.querySelector('.scroll-down a');
+
+        scrollDown.addEventListener('click', function(e) {
+            e.preventDefault();
+            const projectSection = document.getElementById('projects');
+            projectSection.scrollIntoView({ behavior:'smooth' });
+        })
+    });
+
     function formatTitle(s) {
         let arr = s.split("-")
         return arr.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
@@ -29,7 +39,6 @@
         const reposContainer = document.querySelector('#repos');
         sortedRepos.forEach(repo => {
             const originalName = repo.name;
-            console.log(originalName)
             repo.name = formatTitle(repo.name)
             const repoItem = document.createElement('div');
             repoItem.classList.add('repo');
@@ -44,7 +53,7 @@
                     <div class="repo-info">
                         <h3>${repo.name}</h3>
                         <p>${repo.description}</p>
-                        <a href="${repo.html_url}" target="_blank">View Repository</a>
+                        <a class="btn btn-github" href="${repo.html_url}" target="_blank">View Repository</a>
                     </div>
                 `;
             };
