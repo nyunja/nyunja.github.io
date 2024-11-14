@@ -28,14 +28,37 @@
         // Display repositories
         const reposContainer = document.querySelector('#repos');
         sortedRepos.forEach(repo => {
+            const originalName = repo.name;
+            console.log(originalName)
             repo.name = formatTitle(repo.name)
             const repoItem = document.createElement('div');
             repoItem.classList.add('repo');
-            repoItem.innerHTML = `
-                <h3>${repo.name}</h3>
-                <p>${repo.description}</p>
-                <a href="${repo.html_url}" target="_blank">View Repository</a>
-            `;
+
+            // Check if an image exists in the images folder and add the image if it does
+            const imageSrc = `static/images/${originalName.toLowerCase()}.png`;
+            const img = new Image();
+            img.src = imageSrc;
+            img.onload = () => {
+                repoItem.innerHTML = `
+                    <img class="project-img" src="${img.src}" alt="project-screenshot-${repo.name}">
+                    <div class="repo-info">
+                        <h3>${repo.name}</h3>
+                        <p>${repo.description}</p>
+                        <a href="${repo.html_url}" target="_blank">View Repository</a>
+                    </div>
+                `;
+            };
+            img.onerror = () => {
+                repoItem.style.display = 'none';
+                // Image doesn't exist, show the name and description only
+                // repoItem.innerHTML = `
+                // <div class="repo-info">
+                //     <h3>${repo.name}</h3>
+                //     <p>${repo.description}</p>
+                //     <a href="${repo.html_url}" target="_blank">View Repository</a>
+                // </div>
+                // `;
+            };
             reposContainer.appendChild(repoItem);
         });
        })
