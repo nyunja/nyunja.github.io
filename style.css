@@ -389,6 +389,54 @@
             transform: translateY(0);
         }
 
+        /* Accessibility - Keyboard Focus States */
+        a:focus,
+        button:focus,
+        .project-btn:focus,
+        .tech-tag:focus {
+            outline: 3px solid var(--accent);
+            outline-offset: 4px;
+            box-shadow: 0 0 0 4px rgba(255, 77, 0, 0.2);
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        /* Skip to main content link */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            z-index: 999;
+            padding: 1em;
+            background: var(--accent);
+            color: #000;
+            text-decoration: none;
+            font-family: var(--mono);
+            font-weight: bold;
+        }
+
+        .skip-link:focus {
+            left: 0;
+            top: 0;
+        }
+
+        /* Ensure all interactive elements are keyboard accessible */
+        .project-card:focus-within {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        /* Improve link visibility on focus */
+        nav a:focus,
+        footer a:focus {
+            background: rgba(255, 77, 0, 0.1);
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero-footer { grid-template-columns: 1fr; }
@@ -397,4 +445,16 @@
             .stack-list { grid-template-columns: 1fr; }
             .container { padding: 0 20px; }
         }
-    
+
+        /* Reduced motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
