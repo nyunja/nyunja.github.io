@@ -1,0 +1,47 @@
+﻿John Paul Nyunja
+Full Stack / GoLang Developer
+Nyunja.jp@gmail.com | Kisumu, Kenya | +254713588004
+LinkedIn.com/in/nyunja | GitHub.com/nyunja 
+Professional Summary
+Innovative GoLang Developer with strong experience designing and deploying scalable web and SaaS solutions. Proven record of building high-performance backends, optimizing APIs, and leading cross-functional development projects. Passionate about Go microservices, cloud deployment, and mentoring developers to maintain high coding standards.
+Core Skills / Tech Stack
+Languages: Go (Golang), JavaScript, TypeScript, SQL
+Frameworks & Tools: React, Next.js, Docker, Redis, PostgreSQL, Tailwind CSS
+Architecture: Microservices, REST APIs, Multi-tenant SaaS, MVC
+Cloud & DevOps: Render, Vercel, Truehost, GitHub Actions, Containerization
+Practices: CI/CD, API Design, Code Review, Documentation, Agile Development
+Other: Email & SMS Integrations (Zoho, Brevo, Twilio), Data Scraping, PDF Parsing, Data Automation
+Professional Experience
+Full-Stack Developer & System Architect - Nexveria Solutions
+* Developed RentZizi — Property Management SaaS Platform, a scalable multi-tenant system using GoLang, PostgreSQL, and Next.js, improving property management workflows.
+* Integrated WhatsApp automation for rent reminders using Twilio and local providers.
+* Implemented JWT authentication and analytics dashboards with real-time data updates.
+* Deployed on Render using Docker; improved tenant communication efficiency by 40%.
+Software Developer - Zone01 Kisumu
+* Designed and implemented 5+ web applications and 10+ CLI tools using GoLang and Next.js, improving team productivity and delivery speed.
+* Optimized C4.5 decision tree algorithm runtime by 50% through concurrency and goroutine refactoring.
+* Developed RESTful APIs and backend microservices handling user management, authentication, and analytics.
+* Mentored 20+ peers in GoLang best practices, version control, and algorithmic thinking.
+* Led code reviews and introduced continuous integration pipelines, improving deployment reliability.
+Customer Experience Representative - Syncfusion
+* Managed 1,000+ enterprise accounts, coordinating technical onboarding and post-deployment support.
+* Achieved 90% issue resolution rate through systematic troubleshooting and user education.
+* Contributed to 90% retention by improving customer experience through better documentation and communication.
+Research Assistant - Jaramogi Oginga Odinga University of Science and Technology (JOOUST)
+* Processed and analyzed data from 300+ research participants, enhancing data-driven reporting.
+* Designed and automated collection workflows, reducing manual errors by 30%.
+* Presented analytical findings weekly to academic supervisors for COVID-19 studies.
+Personal Projects
+FityBudget (Go, React, PostgreSQL, Gemini AI): fity-budget.vercel.app
+* Developing a modular backend using Clean Architecture (Service/Repository layers) to ensure high maintainability and testability.
+* Automating budget alerts, multi-wallet tracking, and progress visualization for savings goals.
+* Implementing secure data handling with JWT authentication, soft deletes for data recovery, and input validation via go-playground/validator.
+RentBase (Go, Next.js, PostgreSQL, Docker): rentzizi.top
+* Built a secure property management MVP with features for tenant onboarding, lease tracking, and automated payment history.
+* Utilized sqlc for high-performance database interactions and S3 for cloud-based file storage.
+* Implemented a dual-token JWT authentication strategy with HTTP-only cookies for enhanced security.
+Education & Certifications
+* Kubernetes African Developer Training Program (KCNA) — Linux Foundation, 2024
+* M.Sc. Epidemiology and Biostatistics - Jaramogi Oginga Odinga University of Science & Technology
+Soft Skills
+Leadership & Mentorship | Analytical Thinking | Problem Solving | Agile Collaboration | Documentation & Communication
