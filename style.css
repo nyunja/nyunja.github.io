@@ -207,7 +207,7 @@
             background: var(--bg);
             border: 1px solid #333;
             padding: 30px;
-            height: 100%;
+            height: 60%;
         }
 
         .project-card:nth-child(even) {
@@ -463,8 +463,7 @@
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1fr;
             margin-top: 40px;
         }
 
@@ -912,7 +911,7 @@
 
             /* Projects Section */
             .work-section {
-                padding: 60px 0;
+                padding: 60px 0 30px 0;
                 margin-top: 60px;
             }
 
