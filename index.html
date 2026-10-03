@@ -1,926 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Paul Nyunja - Full Stack Engineer | GoLang Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>John Paul Nyunja — Full-Stack Engineer | Go Developer</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Innovative GoLang Developer specializing in scalable web and SaaS solutions. Expert in microservices, REST APIs, and cloud deployment. Building high-performance infrastructure for the next industrial age.">
-    <meta name="keywords" content="GoLang Developer, Full Stack Engineer, Microservices, REST API, Next.js, PostgreSQL, Docker, Kubernetes, SaaS Development, Kenya Developer">
-    <meta name="author" content="John Paul Nyunja">
-    <meta name="robots" content="index, follow">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="John Paul Nyunja is a full-stack software engineer in Kisumu, Kenya, building scalable web and SaaS products with Go, TypeScript, Next.js and PostgreSQL. Explore projects in NyunjaOS, a browser-based desktop.">
+  <meta name="keywords" content="GoLang Developer, Full Stack Engineer, Microservices, REST API, Next.js, PostgreSQL, Docker, Kubernetes, SaaS Development, Kenya Developer">
+  <meta name="author" content="John Paul Nyunja">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nyunja.github.io/">
+  <meta name="theme-color" content="#0d0d0d">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nyunja.github.io/">
-    <meta property="og:title" content="John Paul Nyunja - Full Stack Engineer | GoLang Developer">
-    <meta property="og:description" content="Innovative GoLang Developer specializing in scalable web and SaaS solutions. Expert in microservices, REST APIs, and cloud deployment.">
-    <meta property="og:image" content="https://nyunja.github.io/images/og-image.png">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nyunja.github.io/">
+  <meta property="og:title" content="John Paul Nyunja — Full-Stack Engineer | Go Developer">
+  <meta property="og:description" content="Full-stack engineer building scalable web and SaaS products with Go, TypeScript and PostgreSQL.">
+  <meta property="og:image" content="https://nyunja.github.io/images/og-image.png">
 
-    <!-- Github -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://nyunja.github.io/">
-    <meta property="twitter:title" content="John Paul Nyunja - Full Stack Engineer | GoLang Developer">
-    <meta property="twitter:description" content="Innovative GoLang Developer specializing in scalable web and SaaS solutions. Expert in microservices, REST APIs, and cloud deployment.">
-    <meta property="twitter:image" content="https://nyunja.github.io/images/og-image.png">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nyunja.github.io/">
+  <meta property="twitter:title" content="John Paul Nyunja — Full-Stack Engineer | Go Developer">
+  <meta property="twitter:description" content="Full-stack engineer building scalable web and SaaS products with Go, TypeScript and PostgreSQL.">
+  <meta property="twitter:image" content="https://nyunja.github.io/images/og-image.png">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "John Paul Nyunja",
+    "jobTitle": "Full-Stack Software Engineer",
+    "url": "https://nyunja.github.io/",
+    "email": "mailto:Nyunja.jp@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Kisumu", "addressCountry": "KE" },
+    "sameAs": ["https://github.com/nyunja", "https://linkedin.com/in/nyunja"]
+  }
+  </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-    <!-- Google Analytics -->
-    <!-- Replace 'G-XXXXXXXXXX' with your actual Google Analytics measurement ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Entry Reveal Animation
-            const observerOptions = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-            // Subtle Parallax for Grid
-            window.addEventListener('scroll', () => {
-                const grid = document.querySelector('.grid-overlay');
-                const scrolled = window.pageYOffset;
-                grid.style.transform = `translateY(${scrolled * 0.1}px)`;
-            });
-
-            // Smooth Scroll for Navigation Links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-
+  <!-- Decide desktop vs classic view and apply saved theme before first paint -->
+  <script>
+    (function () {
+      var d = document.documentElement, get = function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } };
+      var params = new URLSearchParams(location.search);
+      var classic = params.has('classic') || (!params.has('os') && get('nyos.view') === 'classic');
+      if (!classic) d.classList.add('os');
+      // Dark is the house style; "system" follows the OS preference
+      var theme = get('nyos.theme') || 'dark';
+      if (theme !== 'system') d.setAttribute('data-theme', theme);
+      d.setAttribute('data-wall', get('nyos.wall') || 'grid');
+    })();
+  </script>
+  <script src="os.js" defer></script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- Skip to main content for keyboard users -->
-    <a href="#main-content" class="skip-link"
-       onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">
-        Skip to main content
-    </a>
+  <!-- ============ Classic view header (hidden in desktop mode) ============ -->
+  <header class="classic-header">
+    <div class="classic-brand">NYUNJA<span>/OS</span> <small>1.0</small></div>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="#resume">Resume</a>
+      <a href="?os" class="classic-switch">Open desktop ↗</a>
+    </nav>
+  </header>
 
-    <div class="noise" aria-hidden="true"></div>
-    <div class="grid-overlay" aria-hidden="true"></div>
+  <!--
+    All portfolio content lives here as plain HTML so it is readable by search
+    engines, works without JavaScript, and doubles as the "classic view".
+    os.js reads each [data-app] section and shows it inside a desktop window.
+  -->
+  <main id="main" class="content">
 
-    <main id="main-content" class="container" role="main">
-        <nav role="navigation" aria-label="Main navigation">
-            <div class="nav-logo">JOHN_PAUL_NYUNJA_1.0</div>
-            <div class="nav-actions">
-                <div class="nav-data">
-                    LAT: 0.0917° S<br>
-		    LONG: 34.7680° E<br>
-                    STATUS: [AVAILABLE]
-                </div>
-            </div>
-        </nav>
-
-        <section class="hero" aria-labelledby="hero-title">
-            <h1 id="hero-title" class="reveal">FULL<br><span class="outline-text">STACK</span><br>ENGINEER</h1>
-            <div class="hero-footer reveal">
-                <div class="tagline">
-                    // BUILDING HIGH-PERFORMANCE INFRASTRUCTURE FOR THE NEXT INDUSTRIAL AGE.
-                </div>
-                <nav class="nav-data quick-nav" aria-label="Quick navigation">
-                    <a href="#projects" aria-label="Jump to projects section">[01] PROJECTS</a><br>
-                    <a href="#experience" aria-label="Jump to experience section">[02] EXPERIENCE</a><br>
-                    <a href="#contact" aria-label="Jump to contact section">[03] CONTACT</a>
-                </nav>
-            </div>
-        </section>
-
-        <section class="about-section reveal" id="about">
-            <span class="section-label">ABOUT_ME</span>
-            <div class="about-content">
-                <div>
-                    <h2>WHO I AM</h2>
-                    <p>
-                        Innovative  Software Developer with strong experience designing and deploying scalable web and SaaS solutions.
-                        Proven record of building high-performance backends, optimizing APIs, and leading cross-functional development projects.
-                    </p>
-                    <p>
-                        Passionate about Go microservices, cloud deployment, and mentoring developers to maintain high coding standards.
-                        Based in Kisumu, Kenya, building solutions for the next industrial age.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div class="ticker-wrap">
-        <div class="ticker">
-            <span>GO (GOLANG) // TYPESCRIPT // JAVASCRIPT // REACT // REACT 19 // NEXT.JS // NEXT.JS 14 // NEXT.JS 15 // RUST // SQLITE // SQLITE3 // MYSQL // POSTGRESQL // WORDPRESS // PHP // DOCKER // NODE.JS // VITE // KAFKA // KUBERNETES // GOOGLE CLOUD // REDIS // TAILWIND CSS // SQL // MICROSERVICES // REST APIS // GITHUB ACTIONS // CI/CD // VERCEL // RENDER // TWILIO // ZOHO // BREVO // WEBSOCKET // HTML5 // CSS3 // EXPRESSJS // SUPABASE // GIN // GORM // RECHARTS // SHADCN-UI // CHI ROUTER // GEMINI AI // WEBSOCKETS</span>
+    <section id="about" data-app="about" data-title="about.txt" data-icon="doc" data-w="560" data-h="560">
+      <div class="app-body prose">
+        <p class="eyebrow">Welcome to NyunjaOS 1.0</p>
+        <h1>John Paul Nyunja<br><span>Full-stack engineer.</span></h1>
+        <p class="lede">I design and ship scalable web and SaaS products — high-performance Go backends, clean APIs, and modern TypeScript frontends.</p>
+        <p>Proven record of building high-performance backends, optimizing APIs, and leading cross-functional development projects. Passionate about Go microservices, cloud deployment, and mentoring developers to maintain high coding standards.</p>
+        <p>Based in Kisumu, Kenya <span class="muted">(0.0917° S, 34.7680° E)</span>. <strong class="status-pill">Available for work</strong></p>
+        <div class="quickstart">
+          <p class="eyebrow">Where to start</p>
+          <ul>
+            <li><a href="#projects" data-open="projects">Projects</a> — 19 things I've built, from a database engine to SaaS platforms</li>
+            <li><a href="#resume" data-open="resume">Resume.pdf</a> — the one-page version</li>
+            <li><a href="#contact" data-open="contact">Mail</a> — get in touch</li>
+            <li class="os-only"><a href="#terminal" data-open="terminal">Terminal</a> — if you'd rather type <code>help</code></li>
+          </ul>
         </div>
-    </div>
-
-    <section class="work-section serrated" id="projects" aria-labelledby="projects-title">
-        <div class="container">
-            <h2 id="projects-title" class="section-label">SELECTED_WORKS_01</h2>
-            <div class="project-grid">
-                <!-- Project 01: Rentbase -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/rentbase.png" alt="Rentbase Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>01 / PROPERTY MANAGEMENT</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">RENTBASE</h2>
-                        <p class="project-description">Full-stack property management platform with JWT authentication and comprehensive relationship management using UUID-based architecture.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">GO</span>
-                            <span class="tech-tag">CHI ROUTER</span>
-                            <span class="tech-tag">POSTGRESQL</span>
-                            <span class="tech-tag">NEXT.JS 14</span>
-                            <span class="tech-tag">TYPESCRIPT</span>
-                            <span class="tech-tag">TAILWIND</span>
-                            <span class="tech-tag">DOCKER</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://rentbase.vercel.app" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View RentBase live demo">
-                                <span>VIEW LIVE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1 8a7 7 0 0 1 7-7c1.65 0 3.15.57 4.35 1.52L2.52 12.35A6.965 6.965 0 0 1 1 8zm13 0a7 7 0 0 1-7 7 6.965 6.965 0 0 1-4.35-1.52l9.83-9.83A6.965 6.965 0 0 1 14 8z"/>
-                                </svg>
-                            </a>
-                            <a href="https://github.com/nyunja/rentbase" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View RentBase source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 02: Fity Budget -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/fitybudget.png" alt="Fity Budget Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>02 / FINTECH / AI</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">FITY-BUDGET</h2>
-                        <p class="project-description">AI-powered personal finance management platform with Google Gemini integration for intelligent budgeting insights and expense tracking.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">GO</span>
-                            <span class="tech-tag">GIN</span>
-                            <span class="tech-tag">POSTGRESQL</span>
-                            <span class="tech-tag">REACT 19</span>
-                            <span class="tech-tag">TYPESCRIPT</span>
-                            <span class="tech-tag">VITE</span>
-                            <span class="tech-tag">GEMINI AI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://fity-budget.vercel.app" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Fity Budget live demo">
-                                <span>VIEW LIVE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1 8a7 7 0 0 1 7-7c1.65 0 3.15.57 4.35 1.52L2.52 12.35A6.965 6.965 0 0 1 1 8zm13 0a7 7 0 0 1-7 7 6.965 6.965 0 0 1-4.35-1.52l9.83-9.83A6.965 6.965 0 0 1 14 8z"/>
-                                </svg>
-                            </a>
-                            <a href="https://github.com/nyunja/fity-budget" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Fity Budget source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 03: Simple RDBMS -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/simple-rdbms.png" alt="Simple RDBMS Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>03 / SYSTEMS</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">SIMPLE RDBMS</h2>
-                        <p class="project-description">A relational database management system implemented from the ground up to handle micro-payment ledgers with custom indexing and storage management.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">GO</span>
-                            <span class="tech-tag">ALGORITHMS</span>
-                            <span class="tech-tag">DATA STRUCTURES</span>
-                            <span class="tech-tag">SYSTEMS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/nyunja/simple-rmbs" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Simple RDBMS source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 04: Ghost Apply -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/ghost-apply.png" alt="Ghost Apply Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>04 / AI / AUTOMATION</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">GHOST APPLY</h2>
-                        <p class="project-description">An AI-powered autonomous agent that automates job applications using intelligent browser automation and LLM-based form filling.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">JAVASCRIPT</span>
-                            <span class="tech-tag">AI/LLM</span>
-                            <span class="tech-tag">PLAYWRIGHT</span>
-                            <span class="tech-tag">AUTOMATION</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/nyunja/ghost-apply" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Ghost Apply source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 05: Social Network -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/social-network.png" alt="Social Network Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>05 / REAL-TIME</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">SOCIAL NETWORK</h2>
-                        <p class="project-description">A comprehensive social platform featuring real-time chat, posts, and notifications built with a Go backend and WebSockets.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">GO</span>
-                            <span class="tech-tag">NEXT.JS</span>
-                            <span class="tech-tag">WEBSOCKETS</span>
-                            <span class="tech-tag">SQLITE</span>
-                            <span class="tech-tag">DOCKER</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/tajjjjr/social-network" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Social Network source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 06: Diawise -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/diawise.png" alt="Diawise Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>06 / HEALTH TECH</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">DIAWISE</h2>
-                        <p class="project-description">A platform focused on diabetes education and community support with healthy living tools and diet management.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">GO</span>
-                            <span class="tech-tag">NEXT.JS</span>
-                            <span class="tech-tag">SQLITE3</span>
-                            <span class="tech-tag">WEBSOCKETS</span>
-                            <span class="tech-tag">HTML5/CSS3</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/tajjjjr/diawise" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Diawise source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 07: NotezJiji -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/notezjiji.png" alt="NotezJiji Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>07 / E-COMMERCE</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">NOTEZJIJI</h2>
-                        <p class="project-description">A marketplace for academic notes featuring secure transactions and file management built with React and Supabase.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">REACT</span>
-                            <span class="tech-tag">TYPESCRIPT</span>
-                            <span class="tech-tag">EXPRESS</span>
-                            <span class="tech-tag">SUPABASE</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://notezjiji.vercel.app" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Notezjiji live demo">
-                                <span>VIEW LIVE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1 8a7 7 0 0 1 7-7c1.65 0 3.15.57 4.35 1.52L2.52 12.35A6.965 6.965 0 0 1 1 8zm13 0a7 7 0 0 1-7 7 6.965 6.965 0 0 1-4.35-1.52l9.83-9.83A6.965 6.965 0 0 1 14 8z"/>
-                                </svg>
-                            </a>
-                            <a href="https://github.com/nyunja/notezjiji" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Notezjiji source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 08: Digital Ant Farm -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/digital-ant-farm.png" alt="Digital Ant Farm Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>08 / ALGORITHMS</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">DIGITAL ANT FARM</h2>
-                        <p class="project-description">Optimized traffic flow and pathfinding through room networks using advanced graph theory algorithms in Go.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">GO</span>
-                            <span class="tech-tag">GRAPH THEORY</span>
-                            <span class="tech-tag">ALGORITHMS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/nyunja/digital-ant-farm-v2" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Digital Ant Farm source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 09: KBase Bulk Uploader -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/kbase-bulk-uploader.png" alt="KBase Bulk Uploader Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>09 / AUTOMATION</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">KBASE UPLOADER</h2>
-                        <p class="project-description">Automation tool for genomic data import into KBase Narratives using Playwright for high-volume ingestion.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">PYTHON</span>
-                            <span class="tech-tag">PLAYWRIGHT</span>
-                            <span class="tech-tag">AUTOMATION</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/nyunja/kbase-bulk-uploader" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View KBase Bulk Uploader source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 10: C4.5 Decision Tree -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/c45-decision-tree.png" alt="C4.5 Decision Tree Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>10 / MACHINE LEARNING</span>
-                            <span>2023</span>
-                        </div>
-                        <h2 class="project-title">C4.5 DECISION TREE</h2>
-                        <p class="project-description">Scalable decision tree classifier implementation in Go for high-performance machine learning model training.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">GO</span>
-                            <span class="tech-tag">ML INTERNALS</span>
-                            <span class="tech-tag">CONCURRENCY</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/nyunja/c4.5-decision-tree" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View C4.5 Decision Tree source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 11: Wallet Transaction API -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/wallet-api.png" alt="Wallet Transaction API Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>11 / BACKEND API</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">WALLET API</h2>
-                        <p class="project-description">Production-quality RESTful API for financial transactions with secure ledger management and Docker containerization.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">NODE.JS</span>
-                            <span class="tech-tag">EXPRESS</span>
-                            <span class="tech-tag">POSTGRESQL</span>
-                            <span class="tech-tag">DOCKER</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/nyunja/wallet-transaction-API" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Wallet API source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 12: Webby Scraper -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/webby-scraper.png" alt="Webby Scraper Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>12 / WEB SCRAPING</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">WEBBY SCRAPER</h2>
-                        <p class="project-description">Car price comparison and data aggregator tool built for high-performance data extraction and structured analysis.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">GO</span>
-                            <span class="tech-tag">SCRAPING</span>
-                            <span class="tech-tag">DATA EXTRACTION</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/nyunja/webby-scraper" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Webby Scraper source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 13: Evently -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/evently.png" alt="Evently Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>13 / EVENT MANAGEMENT</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">EVENTLY</h2>
-                        <p class="project-description">Full-stack event platform for discovery and management using modern React and TypeScript architecture.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">REACT</span>
-                            <span class="tech-tag">TYPESCRIPT</span>
-                            <span class="tech-tag">VITE</span>
-                            <span class="tech-tag">TAILWIND</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://evently-frontend-one.vercel.app" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Evently live demo">
-                                <span>VIEW LIVE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1 8a7 7 0 0 1 7-7c1.65 0 3.15.57 4.35 1.52L2.52 12.35A6.965 6.965 0 0 1 1 8zm13 0a7 7 0 0 1-7 7 6.965 6.965 0 0 1-4.35-1.52l9.83-9.83A6.965 6.965 0 0 1 14 8z"/>
-                                </svg>
-                            </a>
-                            <a href="https://github.com/nyunja/evently" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Evently source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 14: Therapy Chatbot -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/therapy-chatbot.png" alt="Therapy Chatbot Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>14 / GEN AI</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">AI THERAPIST</h2>
-                        <p class="project-description">LLM-powered text-based therapy simulation chatbot developed using Go and the Gemini-Pro model.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">GO</span>
-                            <span class="tech-tag">GEMINI AI</span>
-                            <span class="tech-tag">GEN AI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/nyunja/therapy-chatbot" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Therapy Chatbot source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 15: OLPS Kenya -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/olpskenya.png" alt="OLPS Kenya Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>15 / NGO</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">OLPS KENYA</h2>
-                        <p class="project-description">NGO support system for community initiatives and donations management built with WordPress and PHP.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">WORDPRESS</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MYSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://olpskenya.org" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View OLPS live">
-                                <span>VIEW LIVE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1 8a7 7 0 0 1 7-7c1.65 0 3.15.57 4.35 1.52L2.52 12.35A6.965 6.965 0 0 1 1 8zm13 0a7 7 0 0 1-7 7 6.965 6.965 0 0 1-4.35-1.52l9.83-9.83A6.965 6.965 0 0 1 14 8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 16: Go-ls -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/go-ls.png" alt="Go-ls Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>16 / CLI TOOL</span>
-                            <span>2023</span>
-                        </div>
-                        <h2 class="project-title">GO-LS</h2>
-                        <p class="project-description">Custom implementation of the Unix ls command in Go to explore system interactions and data handling.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">GO</span>
-                            <span class="tech-tag">SYSTEMS</span>
-                            <span class="tech-tag">CLI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/nyunja/go-ls" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Go-ls source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 17: Tajjj -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/tajjj.png" alt="Tajjj Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>17 / AGENCY</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">TAJJJ</h2>
-                        <p class="project-description">Professional software development agency website showcasing services and expertise.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">REACT</span>
-                            <span class="tech-tag">TYPESCRIPT</span>
-                            <span class="tech-tag">VITE</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://tajjj-nine.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Tajjj live demo">
-                                <span>VIEW LIVE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1 8a7 7 0 0 1 7-7c1.65 0 3.15.57 4.35 1.52L2.52 12.35A6.965 6.965 0 0 1 1 8zm13 0a7 7 0 0 1-7 7 6.965 6.965 0 0 1-4.35-1.52l9.83-9.83A6.965 6.965 0 0 1 14 8z"/>
-                                </svg>
-                            </a>
-                            <a href="https://github.com/tajjjjr/tajjj" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Tajjj source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 18: E-commerce Dashboard -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/ecomm-dashboard.png" alt="E-commerce Dashboard Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>18 / ADMIN PANEL</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">ECOMM ADMIN</h2>
-                        <p class="project-description">Modern, feature-rich admin dashboard for e-commerce applications built with Next.js 15 and shadcn/ui.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">NEXT.JS 15</span>
-                            <span class="tech-tag">REACT 19</span>
-                            <span class="tech-tag">TYPESCRIPT</span>
-                            <span class="tech-tag">SHADCN-UI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://duka-admin-tau.vercel.app" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View E-commerce Dashboard live demo">
-                                <span>VIEW LIVE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1 8a7 7 0 0 1 7-7c1.65 0 3.15.57 4.35 1.52L2.52 12.35A6.965 6.965 0 0 1 1 8zm13 0a7 7 0 0 1-7 7 6.965 6.965 0 0 1-4.35-1.52l9.83-9.83A6.965 6.965 0 0 1 14 8z"/>
-                                </svg>
-                            </a>
-                            <a href="https://github.com/nyunja/nextsj-shadcn-ecomm-dashboard" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View E-commerce Dashboard source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-
-                <!-- Project 19: E-commerce Storefront -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="images/ecomm-ui.png" alt="E-commerce Storefront Project">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="project-inner">
-                        <div class="project-meta">
-                            <span>19 / E-COMMERCE</span>
-                            <span>2024</span>
-                        </div>
-                        <h2 class="project-title">ECOMM STORE</h2>
-                        <p class="project-description">Modern e-commerce storefront with a full shopping experience built with Next.js 15 and Tailwind CSS.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">NEXT.JS 15</span>
-                            <span class="tech-tag">REACT 19</span>
-                            <span class="tech-tag">TYPESCRIPT</span>
-                            <span class="tech-tag">TAILWIND</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/nyunja/nextsj-shadcn-ecomm-ui" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View E-commerce Storefront source code on GitHub">
-                                <span>VIEW CODE</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="warning-stripes warning-stripes-spacing"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <div class="container">
-        <section class="stack-section reveal">
-            <span class="section-label section-label-spacing">SYSTEM_CAPABILITIES</span>
-            <div class="stack-list">
-                <div class="stack-item">
-                    <h3>LANGUAGES</h3>
-                    <p>Go (Golang) / JavaScript / TypeScript / SQL / PHP</p>
-                </div>
-                <div class="stack-item">
-                    <h3>FRAMEWORKS & TOOLS</h3>
-                    <p>React / React 19 / Next.js 14/15 / Express.js / Gin / GORM / Docker / Redis / PostgreSQL / MySQL / SQLite / Supabase / Tailwind CSS / shadcn/ui / Vite / WordPress</p>
-                </div>
-                <div class="stack-item">
-                    <h3>ARCHITECTURE</h3>
-                    <p>Microservices / REST APIs / Multi-tenant SaaS / MVC / Real-time Systems</p>
-                </div>
-                <div class="stack-item">
-                    <h3>CLOUD & DEVOPS</h3>
-                    <p>Render / Vercel / Truehost / GitHub Actions / Docker / Containerization / CI/CD Pipelines</p>
-                </div>
-                <div class="stack-item">
-                    <h3>PRACTICES</h3>
-                    <p>CI/CD / API Design / Code Review / Documentation / Agile Development / Performance Optimization</p>
-                </div>
-                <div class="stack-item">
-                    <h3>INTEGRATIONS & AI</h3>
-                    <p>Email & SMS (Zoho, Brevo, Twilio) / M-Pesa Payments / Gemini AI / Data Scraping / PDF Parsing / Data Automation</p>
-                </div>
+    <section id="projects" data-app="projects" data-title="Projects" data-icon="folder" data-w="760" data-h="560">
+      <div class="app-body">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-list">
+          <article class="project" id="project-rentbase" data-slug="rentbase" data-featured>
+            <img class="project-shot" src="images/web/rentbase.webp" data-thumb="images/thumbs/rentbase.webp" alt="Rentbase project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Property Management</span><span>2024</span></p>
+              <h3>Rentbase</h3>
+              <p>Full-stack property management platform with JWT authentication and comprehensive relationship management using UUID-based architecture.</p>
+              <p class="project-impact"><strong>Impact</strong> Engineered a secure, multi-tenant architecture that streamlines property oversight, maintenance requests, and financial reporting using a high-performance Go backend.</p>
+              <p class="project-focus"><span>Showcases</span> Full-stack system architecture</p>
+              <ul class="tags" aria-label="Tech stack"><li>GO</li><li>CHI ROUTER</li><li>POSTGRESQL</li><li>NEXT.JS 14</li><li>TYPESCRIPT</li><li>TAILWIND</li><li>DOCKER</li></ul>
+              <p class="project-links"><a class="btn btn-primary" href="https://rentbase.vercel.app" target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/nyunja/rentbase" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
             </div>
-        </section>
-
-        <section class="education-section section-spacing reveal" id="education">
-            <span class="section-label">EDUCATION_&_CERTIFICATIONS</span>
-            <div class="education-content section-label-spacing">
-                <!-- Self-Taught Advanced Software Engineering -->
-                <div class="education-card primary">
-                    <div class="education-year">2021 – PRESENT</div>
-                    <h3>SELF-TAUGHT ADVANCED SOFTWARE ENGINEERING</h3>
-                    <p class="education-subtitle">Systems Engineering & AI Integration</p>
-                    <p class="education-institution">Extensive focus on distributed systems, compiler design, and AI integration.</p>
-                </div>
-                
-                <!-- KCNA Certification -->
-                <div class="education-card">
-                    <div class="education-year">2024</div>
-                    <h3>KCNA (KUBERNETES AND CLOUD NATIVE ASSOCIATE)</h3>
-                    <p class="education-subtitle">Cloud Native Computing Foundation (CNCF)</p>
-                    <p class="education-institution">Professional Certification</p>
-                </div>
-
-                <!-- Bachelor of Science -->
-                <div class="education-card">
-                    <div class="education-year">2015</div>
-                    <h3>BACHELOR OF SCIENCE (BSC)</h3>
-                    <p class="education-institution">Kenyatta University</p>
-                    <p class="education-subtitle">Graduated 2015</p>
-                </div>
+          </article>
+          <article class="project" id="project-fitybudget" data-slug="fitybudget" data-featured>
+            <img class="project-shot" src="images/web/fitybudget.webp" data-thumb="images/thumbs/fitybudget.webp" alt="Fity Budget project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Fintech / AI</span><span>2024</span></p>
+              <h3>Fity Budget</h3>
+              <p>AI-powered personal finance management platform with Google Gemini integration for intelligent budgeting insights and expense tracking.</p>
+              <p class="project-impact"><strong>Impact</strong> Integrates AI-driven insights with real-time expense tracking and visual reporting dashboards.</p>
+              <p class="project-focus"><span>Showcases</span> AI integration</p>
+              <ul class="tags" aria-label="Tech stack"><li>GO</li><li>GIN</li><li>POSTGRESQL</li><li>REACT 19</li><li>TYPESCRIPT</li><li>VITE</li><li>GEMINI AI</li></ul>
+              <p class="project-links"><a class="btn btn-primary" href="https://fity-budget.vercel.app" target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/nyunja/fity-budget" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
             </div>
-        </section>
-
-        <section class="blog-section section-spacing reveal" id="blog">
-            <span class="section-label">THOUGHT_LEADERSHIP</span>
-            <p class="blog-subtitle">Articles and insights on software engineering, architecture, and development practices.</p>
-
-            <div class="blog-content section-label-spacing">
-                <!-- Article 1 -->
-                <article class="blog-article featured">
-                    <div class="blog-article-header">
-                        <div>
-                            <h3>Building Multi-Tenant SaaS with Go and PostgreSQL</h3>
-                            <p class="blog-article-subtitle">Best practices for designing scalable multi-tenant architectures</p>
-                        </div>
-                        <span class="blog-read-time">5 min read</span>
-                    </div>
-                    <p class="blog-article-excerpt">
-                        Exploring tenant isolation strategies, database schema design, and security considerations when building enterprise-grade SaaS platforms with GoLang.
-                    </p>
-                    <div class="blog-article-footer">
-                        <span class="blog-status">Coming Soon</span>
-                    </div>
-                </article>
-
-                <!-- Article 2 -->
-                <article class="blog-article">
-                    <div class="blog-article-header">
-                        <div>
-                            <h3>Optimizing Go Services with Goroutines and Channels</h3>
-                            <p class="blog-article-subtitle">Practical concurrency patterns for high-performance backends</p>
-                        </div>
-                        <span class="blog-read-time">7 min read</span>
-                    </div>
-                    <p class="blog-article-excerpt">
-                        Deep dive into Go's concurrency model, real-world use cases from optimizing the C4.5 decision tree algorithm, and performance benchmarks.
-                    </p>
-                    <div class="blog-article-footer">
-                        <span class="blog-status">Coming Soon</span>
-                    </div>
-                </article>
-
-                <!-- Article 3 -->
-                <article class="blog-article">
-                    <div class="blog-article-header">
-                        <div>
-                            <h3>From Monolith to Microservices: A Practical Guide</h3>
-                            <p class="blog-article-subtitle">Lessons learned from breaking down complex systems</p>
-                        </div>
-                        <span class="blog-read-time">8 min read</span>
-                    </div>
-                    <p class="blog-article-excerpt">
-                        A step-by-step approach to decomposing monolithic applications into microservices, including API design, service boundaries, and deployment strategies.
-                    </p>
-                    <div class="blog-article-footer">
-                        <span class="blog-status">Coming Soon</span>
-                    </div>
-                </article>
+          </article>
+          <article class="project" id="project-simple-rdbms" data-slug="simple-rdbms" data-featured>
+            <img class="project-shot" src="images/web/simple-rdbms.webp" data-thumb="images/thumbs/simple-rdbms.webp" alt="Simple RDBMS project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Systems</span><span>2024</span></p>
+              <h3>Simple RDBMS</h3>
+              <p>A relational database management system implemented from the ground up to handle micro-payment ledgers with custom indexing and storage management.</p>
+              <p class="project-impact"><strong>Impact</strong> Built custom indexing, query execution, and storage management without relying on existing database engines.</p>
+              <p class="project-focus"><span>Showcases</span> Systems programming</p>
+              <ul class="tags" aria-label="Tech stack"><li>GO</li><li>ALGORITHMS</li><li>DATA STRUCTURES</li><li>SYSTEMS</li></ul>
+              <p class="project-links"><a class="btn" href="https://github.com/nyunja/simple-rmbs" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
             </div>
-        </section>
-
-        <footer id="contact" role="contentinfo" aria-labelledby="contact-title">
-            <div class="footer-content">
-                <h2 id="contact-title" class="footer-title">GET IN TOUCH</h2>
-                <address class="footer-contact">
-                    <a href="mailto:Nyunja.jp@gmail.com" class="footer-email" aria-label="Email John Paul Nyunja">Nyunja.jp@gmail.com</a><br>
-                    <a href="tel:+254713588004" class="footer-link" aria-label="Call John Paul Nyunja">+254 713 588004</a><br>
-                    <a href="https://github.com/nyunja" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Visit John Paul Nyunja's GitHub profile">github.com/nyunja</a><br>
-                    <a href="https://linkedin.com/in/nyunja" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Visit John Paul Nyunja's LinkedIn profile">linkedin.com/in/nyunja</a>
-                </address>
+          </article>
+          <article class="project" id="project-ghost-apply" data-slug="ghost-apply" data-featured>
+            <img class="project-shot" src="images/web/ghost-apply.webp" data-thumb="images/thumbs/ghost-apply.webp" alt="Ghost Apply project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>AI / Automation</span><span>2024</span></p>
+              <h3>Ghost Apply</h3>
+              <p>An AI-powered autonomous agent that automates job applications using intelligent browser automation and LLM-based form filling.</p>
+              <p class="project-impact"><strong>Impact</strong> Automates repetitive application tasks using intelligent browser automation and LLM-based form filling.</p>
+              <p class="project-focus"><span>Showcases</span> AI automation</p>
+              <ul class="tags" aria-label="Tech stack"><li>JAVASCRIPT</li><li>AI/LLM</li><li>PLAYWRIGHT</li><li>AUTOMATION</li></ul>
+              <p class="project-links"><a class="btn" href="https://github.com/nyunja/ghost-apply" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
             </div>
-            <!-- <div class="footer-download">
-                <a href="resume/John Paul Nyunja - Full Stack _ GoLang Developer.pdf" download class="project-btn footer-btn" aria-label="Download John Paul Nyunja's full resume as PDF">
-                    <span>DOWNLOAD FULL RESUME</span>
-                    <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                        <path d="M8.5 11.5l3.5-3.5h-2.5V0h-3v8H4l3.5 3.5zM15 14v2H1v-2h2v-1H1a1 1 0 00-1 1v2a1 1 0 001 1h14a1 1 0 001-1v-2a1 1 0 00-1-1h-2v1h2z"/>
-                    </svg>
-                </a>
-            </div> -->
-        </footer>
-    </div>
+          </article>
+          <article class="project" id="project-social-network" data-slug="social-network">
+            <img class="project-shot" src="images/web/social-network.webp" data-thumb="images/thumbs/social-network.webp" alt="Social Network project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Real-Time</span><span>2024</span></p>
+              <h3>Social Network</h3>
+              <p>A comprehensive social platform featuring real-time chat, posts, and notifications built with a Go backend and WebSockets.</p>
+              <p class="project-focus"><span>Showcases</span> Real-time communication</p>
+              <ul class="tags" aria-label="Tech stack"><li>GO</li><li>NEXT.JS</li><li>WEBSOCKETS</li><li>SQLITE</li><li>DOCKER</li></ul>
+              <p class="project-links"><a class="btn" href="https://github.com/tajjjjr/social-network" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-diawise" data-slug="diawise">
+            <img class="project-shot" src="images/web/diawise.webp" data-thumb="images/thumbs/diawise.webp" alt="Diawise project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Health Tech</span><span>2024</span></p>
+              <h3>Diawise</h3>
+              <p>A platform focused on diabetes education and community support with healthy living tools and diet management.</p>
+              <p class="project-focus"><span>Showcases</span> Health-tech solutions</p>
+              <ul class="tags" aria-label="Tech stack"><li>GO</li><li>NEXT.JS</li><li>SQLITE3</li><li>WEBSOCKETS</li><li>HTML5/CSS3</li></ul>
+              <p class="project-links"><a class="btn" href="https://github.com/tajjjjr/diawise" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-notezjiji" data-slug="notezjiji">
+            <img class="project-shot" src="images/web/notezjiji.webp" data-thumb="images/thumbs/notezjiji.webp" alt="NotezJiji project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>E-Commerce</span><span>2024</span></p>
+              <h3>NotezJiji</h3>
+              <p>A marketplace for academic notes featuring secure transactions and file management built with React and Supabase.</p>
+              <p class="project-focus"><span>Showcases</span> E-commerce development</p>
+              <ul class="tags" aria-label="Tech stack"><li>REACT</li><li>TYPESCRIPT</li><li>EXPRESS</li><li>SUPABASE</li></ul>
+              <p class="project-links"><a class="btn btn-primary" href="https://notezjiji.vercel.app" target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/nyunja/notezjiji" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-digital-ant-farm" data-slug="digital-ant-farm">
+            <img class="project-shot" src="images/web/digital-ant-farm.webp" data-thumb="images/thumbs/digital-ant-farm.webp" alt="Digital Ant Farm project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Algorithms</span><span>2024</span></p>
+              <h3>Digital Ant Farm</h3>
+              <p>Optimized traffic flow and pathfinding through room networks using advanced graph theory algorithms in Go.</p>
+              <p class="project-focus"><span>Showcases</span> Advanced algorithms</p>
+              <ul class="tags" aria-label="Tech stack"><li>GO</li><li>GRAPH THEORY</li><li>ALGORITHMS</li></ul>
+              <p class="project-links"><a class="btn" href="https://github.com/nyunja/digital-ant-farm-v2" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-kbase-bulk-uploader" data-slug="kbase-bulk-uploader">
+            <img class="project-shot" src="images/web/kbase-bulk-uploader.webp" data-thumb="images/thumbs/kbase-bulk-uploader.webp" alt="KBase Uploader project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Automation</span><span>2024</span></p>
+              <h3>KBase Uploader</h3>
+              <p>Automation tool for genomic data import into KBase Narratives using Playwright for high-volume ingestion.</p>
+              <p class="project-focus"><span>Showcases</span> Browser automation</p>
+              <ul class="tags" aria-label="Tech stack"><li>PYTHON</li><li>PLAYWRIGHT</li><li>AUTOMATION</li></ul>
+              <p class="project-links"><a class="btn" href="https://github.com/nyunja/kbase-bulk-uploader" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-c45-decision-tree" data-slug="c45-decision-tree">
+            <img class="project-shot" src="images/web/c45-decision-tree.webp" data-thumb="images/thumbs/c45-decision-tree.webp" alt="C4.5 Decision Tree project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Machine Learning</span><span>2023</span></p>
+              <h3>C4.5 Decision Tree</h3>
+              <p>Scalable decision tree classifier implementation in Go for high-performance machine learning model training.</p>
+              <p class="project-focus"><span>Showcases</span> Machine learning internals</p>
+              <ul class="tags" aria-label="Tech stack"><li>GO</li><li>ML INTERNALS</li><li>CONCURRENCY</li></ul>
+              <p class="project-links"><a class="btn" href="https://github.com/nyunja/c4.5-decision-tree" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-wallet-api" data-slug="wallet-api">
+            <img class="project-shot" src="images/web/wallet-api.webp" data-thumb="images/thumbs/wallet-api.webp" alt="Wallet API project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Backend API</span><span>2024</span></p>
+              <h3>Wallet API</h3>
+              <p>Production-quality RESTful API for financial transactions with secure ledger management and Docker containerization.</p>
+              <p class="project-focus"><span>Showcases</span> Backend API design</p>
+              <ul class="tags" aria-label="Tech stack"><li>NODE.JS</li><li>EXPRESS</li><li>POSTGRESQL</li><li>DOCKER</li></ul>
+              <p class="project-links"><a class="btn" href="https://github.com/nyunja/wallet-transaction-API" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-webby-scraper" data-slug="webby-scraper">
+            <img class="project-shot" src="images/web/webby-scraper.webp" data-thumb="images/thumbs/webby-scraper.webp" alt="Webby Scraper project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Web Scraping</span><span>2024</span></p>
+              <h3>Webby Scraper</h3>
+              <p>Car price comparison and data aggregator tool built for high-performance data extraction and structured analysis.</p>
+              <p class="project-focus"><span>Showcases</span> Web scraping &amp; data extraction</p>
+              <ul class="tags" aria-label="Tech stack"><li>GO</li><li>SCRAPING</li><li>DATA EXTRACTION</li></ul>
+              <p class="project-links"><a class="btn" href="https://github.com/nyunja/webby-scraper" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-evently" data-slug="evently">
+            <img class="project-shot" src="images/web/evently.webp" data-thumb="images/thumbs/evently.webp" alt="Evently project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Event Management</span><span>2024</span></p>
+              <h3>Evently</h3>
+              <p>Full-stack event platform for discovery and management using modern React and TypeScript architecture.</p>
+              <p class="project-focus"><span>Showcases</span> Modern frontend frameworks</p>
+              <ul class="tags" aria-label="Tech stack"><li>REACT</li><li>TYPESCRIPT</li><li>VITE</li><li>TAILWIND</li></ul>
+              <p class="project-links"><a class="btn btn-primary" href="https://evently-frontend-one.vercel.app" target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/nyunja/evently" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-therapy-chatbot" data-slug="therapy-chatbot">
+            <img class="project-shot" src="images/web/therapy-chatbot.webp" data-thumb="images/thumbs/therapy-chatbot.webp" alt="AI Therapist project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Generative AI</span><span>2024</span></p>
+              <h3>AI Therapist</h3>
+              <p>LLM-powered text-based therapy simulation chatbot developed using Go and the Gemini-Pro model.</p>
+              <p class="project-focus"><span>Showcases</span> Generative AI</p>
+              <ul class="tags" aria-label="Tech stack"><li>GO</li><li>GEMINI AI</li><li>GEN AI</li></ul>
+              <p class="project-links"><a class="btn" href="https://github.com/nyunja/therapy-chatbot" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-olpskenya" data-slug="olpskenya">
+            <img class="project-shot" src="images/web/olpskenya.webp" data-thumb="images/thumbs/olpskenya.webp" alt="OLPS Kenya project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>NGO</span><span>2024</span></p>
+              <h3>OLPS Kenya</h3>
+              <p>NGO support system for community initiatives and donations management built with WordPress and PHP.</p>
+              <p class="project-focus"><span>Showcases</span> WordPress development</p>
+              <ul class="tags" aria-label="Tech stack"><li>WORDPRESS</li><li>PHP</li><li>MYSQL</li></ul>
+              <p class="project-links"><a class="btn btn-primary" href="https://olpskenya.org" target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-go-ls" data-slug="go-ls">
+            <img class="project-shot" src="images/web/go-ls.webp" data-thumb="images/thumbs/go-ls.webp" alt="go-ls project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>CLI Tool</span><span>2023</span></p>
+              <h3>go-ls</h3>
+              <p>Custom implementation of the Unix ls command in Go to explore system interactions and data handling.</p>
+              <p class="project-focus"><span>Showcases</span> CLI tool development</p>
+              <ul class="tags" aria-label="Tech stack"><li>GO</li><li>SYSTEMS</li><li>CLI</li></ul>
+              <p class="project-links"><a class="btn" href="https://github.com/nyunja/go-ls" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-tajjj" data-slug="tajjj">
+            <img class="project-shot" src="images/web/tajjj.webp" data-thumb="images/thumbs/tajjj.webp" alt="Tajjj project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Agency</span><span>2024</span></p>
+              <h3>Tajjj</h3>
+              <p>Professional software development agency website showcasing services and expertise.</p>
+              <p class="project-focus"><span>Showcases</span> Professional agency presence</p>
+              <ul class="tags" aria-label="Tech stack"><li>REACT</li><li>TYPESCRIPT</li><li>VITE</li></ul>
+              <p class="project-links"><a class="btn btn-primary" href="https://tajjj-nine.vercel.app/" target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/tajjjjr/tajjj" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-ecomm-dashboard" data-slug="ecomm-dashboard">
+            <img class="project-shot" src="images/web/ecomm-dashboard.webp" data-thumb="images/thumbs/ecomm-dashboard.webp" alt="Ecomm Admin project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>Admin Panel</span><span>2024</span></p>
+              <h3>Ecomm Admin</h3>
+              <p>Modern, feature-rich admin dashboard for e-commerce applications built with Next.js 15 and shadcn/ui.</p>
+              <p class="project-focus"><span>Showcases</span> Admin panel architecture</p>
+              <ul class="tags" aria-label="Tech stack"><li>NEXT.JS 15</li><li>REACT 19</li><li>TYPESCRIPT</li><li>SHADCN-UI</li></ul>
+              <p class="project-links"><a class="btn btn-primary" href="https://duka-admin-tau.vercel.app" target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/nyunja/nextsj-shadcn-ecomm-dashboard" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <article class="project" id="project-ecomm-ui" data-slug="ecomm-ui">
+            <img class="project-shot" src="images/web/ecomm-ui.webp" data-thumb="images/thumbs/ecomm-ui.webp" alt="Ecomm Store project artwork" width="1024" height="1024" loading="lazy" decoding="async">
+            <div class="project-info">
+              <p class="project-meta"><span>E-Commerce</span><span>2024</span></p>
+              <h3>Ecomm Store</h3>
+              <p>Modern e-commerce storefront with a full shopping experience built with Next.js 15 and Tailwind CSS.</p>
+              <p class="project-focus"><span>Showcases</span> E-commerce UX/UI</p>
+              <ul class="tags" aria-label="Tech stack"><li>NEXT.JS 15</li><li>REACT 19</li><li>TYPESCRIPT</li><li>TAILWIND</li></ul>
+              <p class="project-links"><a class="btn" href="https://github.com/nyunja/nextsj-shadcn-ecomm-ui" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    
+    <section id="skills" data-app="skills" data-title="skills.txt" data-icon="doc" data-w="560" data-h="520">
+      <div class="app-body prose">
+        <h2 class="section-title">Skills</h2>
+        <dl class="spec-list">
+          <div><dt>Languages</dt><dd>Go (Golang) / JavaScript / TypeScript / SQL / PHP</dd></div>
+          <div><dt>Frameworks &amp; tools</dt><dd>React / React 19 / Next.js 14/15 / Express.js / Gin / GORM / Docker / Redis / PostgreSQL / MySQL / SQLite / Supabase / Tailwind CSS / shadcn/ui / Vite / WordPress</dd></div>
+          <div><dt>Architecture</dt><dd>Microservices / REST APIs / Multi-tenant SaaS / MVC / Real-time systems</dd></div>
+          <div><dt>Cloud &amp; DevOps</dt><dd>Render / Vercel / Truehost / GitHub Actions / Docker / Containerization / CI/CD pipelines</dd></div>
+          <div><dt>Practices</dt><dd>CI/CD / API design / Code review / Documentation / Agile development / Performance optimization</dd></div>
+          <div><dt>Integrations &amp; AI</dt><dd>Email &amp; SMS (Zoho, Brevo, Twilio) / M-Pesa payments / Gemini AI / Data scraping / PDF parsing / Data automation</dd></div>
+        </dl>
+      </div>
+    </section>
 
+    <section id="education" data-app="education" data-title="education.log" data-icon="log" data-w="540" data-h="440">
+      <div class="app-body prose">
+        <h2 class="section-title">Education &amp; certifications</h2>
+        <ol class="timeline">
+          <li>
+            <time>2021 – present</time>
+            <h3>Self-taught advanced software engineering</h3>
+            <p class="muted">Systems engineering &amp; AI integration</p>
+            <p>Extensive focus on distributed systems, compiler design, and AI integration.</p>
+          </li>
+          <li>
+            <time>2024</time>
+            <h3>KCNA — Kubernetes and Cloud Native Associate</h3>
+            <p class="muted">Cloud Native Computing Foundation (CNCF) · Professional certification</p>
+          </li>
+          <li>
+            <time>2015</time>
+            <h3>Bachelor of Science (BSc)</h3>
+            <p class="muted">Kenyatta University</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="notes" data-app="notes" data-title="Notes" data-icon="notes" data-w="600" data-h="500">
+      <div class="app-body prose">
+        <h2 class="section-title">Notes</h2>
+        <p class="muted">Articles on software engineering, architecture, and development practices. Drafts in progress.</p>
+        <article class="note">
+          <h3>Building Multi-Tenant SaaS with Go and PostgreSQL</h3>
+          <p class="muted">Best practices for designing scalable multi-tenant architectures · 5 min read · <span class="tag-soon">Coming soon</span></p>
+          <p>Exploring tenant isolation strategies, database schema design, and security considerations when building enterprise-grade SaaS platforms with Go.</p>
+        </article>
+        <article class="note">
+          <h3>Optimizing Go Services with Goroutines and Channels</h3>
+          <p class="muted">Practical concurrency patterns for high-performance backends · 7 min read · <span class="tag-soon">Coming soon</span></p>
+          <p>Deep dive into Go's concurrency model, real-world use cases from optimizing the C4.5 decision tree algorithm, and performance benchmarks.</p>
+        </article>
+        <article class="note">
+          <h3>From Monolith to Microservices: A Practical Guide</h3>
+          <p class="muted">Lessons learned from breaking down complex systems · 8 min read · <span class="tag-soon">Coming soon</span></p>
+          <p>A step-by-step approach to decomposing monolithic applications into microservices, including API design, service boundaries, and deployment strategies.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" data-app="contact" data-title="Mail" data-icon="mail" data-w="620" data-h="540">
+      <div class="app-body mail">
+        <h2 class="section-title">Get in touch</h2>
+        <form class="mail-form" data-mailto="Nyunja.jp@gmail.com">
+          <div class="mail-row"><span>To</span><a href="mailto:Nyunja.jp@gmail.com">Nyunja.jp@gmail.com</a></div>
+          <label class="mail-row"><span>Subject</span><input name="subject" type="text" placeholder="Let's build something" required></label>
+          <label class="mail-body"><span class="sr-only">Message</span><textarea name="body" rows="7" placeholder="Hi John Paul, …" required></textarea></label>
+          <div class="mail-actions">
+            <button class="btn btn-primary" type="submit">Send via your mail app</button>
+            <span class="muted small">Opens your email client with this message filled in.</span>
+          </div>
+        </form>
+        <address class="contact-links">
+          <a href="mailto:Nyunja.jp@gmail.com"><span>Email</span>Nyunja.jp@gmail.com</a>
+          <a href="tel:+254713588004"><span>Phone</span>+254 713 588004</a>
+          <a href="https://github.com/nyunja" target="_blank" rel="noopener noreferrer"><span>GitHub</span>github.com/nyunja</a>
+          <a href="https://linkedin.com/in/nyunja" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span>linkedin.com/in/nyunja</a>
+        </address>
+      </div>
+    </section>
+
+    <section id="resume" data-app="resume" data-title="Resume.pdf" data-icon="pdf" data-w="720" data-h="640">
+      <div class="app-body resume">
+        <h2 class="section-title">Resume</h2>
+        <div class="resume-bar">
+          <a class="btn btn-primary" href="resume/John%20Paul%20Nyunja%20-%20Rainforest%20Fullstack%20Resume.pdf" download="John-Paul-Nyunja-Resume.pdf">Download PDF</a>
+          <a class="btn" href="resume/John%20Paul%20Nyunja%20-%20Rainforest%20Fullstack%20Resume.pdf" target="_blank" rel="noopener">Open in new tab <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="resume-frame" data-src="resume/John%20Paul%20Nyunja%20-%20Rainforest%20Fullstack%20Resume.pdf"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="classic-footer">
+    <p>© John Paul Nyunja · Kisumu, Kenya · <a href="?os">Open the desktop</a></p>
+  </footer>
 
 </body>
 </html>
